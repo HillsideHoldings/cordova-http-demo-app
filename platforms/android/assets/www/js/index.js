@@ -51,14 +51,13 @@ app.initialize();
 
 
 var APP_FOLDER = "AppForPlugins";
-//var SONG_URL = "https://traffic.libsyn.com/secure/mixergy/1.mp3";
-var SONG_URL = "https://secure-hwcdn.libsyn.com/p/6/2/3/6236f647b7714eba/1.mp3?c_id=7997049&expiration=1478822879&hwt=34eb10ebbfd67c097f5af5266deedf7f";
+var SONG_URL = "https://traffic.libsyn.com/secure/mixergy/1.mp3";
+//var SONG_URL = "https://secure-hwcdn.libsyn.com/p/6/2/3/6236f647b7714eba/1.mp3?c_id=7997049&expiration=1478822879&hwt=34eb10ebbfd67c097f5af5266deedf7f";
 var FILE_NAME = "1.mp3";
 
 var downloadInProgress = false;
 
 function startStopDownload(){
-	
 	if(downloadInProgress){
 		// stop download
 		downloadInProgress = false;
@@ -67,9 +66,7 @@ function startStopDownload(){
 	}else{
 		// start download
 		startDownload(FILE_NAME);
-
 	}
-
 }
 
 function startDownload(filename){
@@ -82,7 +79,7 @@ function startDownload(filename){
             function (metadata) {
                 var size = metadata.size;
                 console.log("File size: "+size);
-                size = size-1;
+                //size = size-1;
                 if(size < 0){
                     size = 0;
                 }
