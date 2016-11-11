@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+    <title>Demo App for testing Plugins</title>
+</head>
+<body>
+    <div class="app1">
+        <div>
+            <p>Download song from:</p>
+            <p>https://traffic.libsyn.com/secure/mixergy/1.mp3</p>
+            <button class="start" value="start" style="margin-top:10px;"> Start/Stop</button>
+            <button class="filesize" value="filesize" style="margin-top:10px;">File Size</button>
+            <button class="del" value="del" style="margin-top:10px;"> Delete File</button>
+            <button class="md5button" value="md5" style="margin-top:10px;">Show MD5</button>
+        </div>
+        <div>
+            <p style="margin-top: 30px;"><span>Downloaded:</span><span id="progress">0</span></p>
+            <p style="margin-top: 15px;"><span>Headers:</span><span id="headers"></span></p>
+            <p style="margin-top: 15px;"><span>MD5:</span><span id="md5"></span></p>
+
+
+        </div>
+
+    </div>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
